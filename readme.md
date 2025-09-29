@@ -21,7 +21,7 @@ Professional audio processing tool with enhanced GUI interface for sermon, podca
 ### Install Dependencies
 ```bash
 pip install pydub numpy scipy noisereduce psutil
-
+```
 # Usage
 Quick Start - GUI (Easiest)
 bashpython audio_processor_gui.py
