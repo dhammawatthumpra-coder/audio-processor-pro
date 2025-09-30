@@ -81,7 +81,9 @@ pip install pydub numpy scipy noisereduce psutil
 ```
 # Usage
 Quick Start - GUI (Easiest)
-bashpython audio_processor_gui.py
+```bash
+python audio_processor_gui.py
+```
 The GUI provides an intuitive interface with:
 
 # Visual module configuration
@@ -91,41 +93,40 @@ Batch processing support
 
 # Command Line Interface
 Basic Usage
-bash# Process with default sermon preset
 ```bash
+# Process with default sermon preset
 python audio_processor_pro-v5.8.py input.mp3 output.mp3
-```
+
 # Use specific preset
-```bash
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 --preset podcast_pro
-```
+
 # Add gain boost
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 --preset sermon_ultra --gain 6.0
+```
 Silence Processing Control
-bash# Default: Trailing silence only (safe)
 ```bash
+# Default: Trailing silence only (safe)
 python audio_processor_pro-v5.8.py input.mp3 output.mp3
-```
+
 # Disable leading silence trimming (recommended for recordings)
-```bash
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 --no-trim-leading
-```
+
 # Disable trailing silence trimming
-```bash
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 --no-trim-trailing
 ```
 # Disable all silence processing
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 --no-silence-processing
 Batch Processing
-bash# Process all MP3 files in current directory
 ```bash
+# Process all MP3 files in current directory
 python audio_processor_pro-v5.8.py "*.mp3" --batch --preset broadcast_pro --overwrite
-```
+
 # Process specific folder
 python audio_processor_pro-v5.8.py "/path/to/audio/files/*.mp3" --batch
+```
 Advanced Options
-bash# Custom output format and quality
 ```bash
+# Custom output format and quality
 python audio_processor_pro-v5.8.py input.wav output.mp3 \
   --format mp3 \
   --bitrate 320k \
@@ -146,8 +147,8 @@ python audio_processor_pro-v5.8.py input.mp3 output.mp3 \
 # Channel analysis only
 python audio_processor_pro-v5.8.py input.mp3 --channel-analysis
 Using Custom Configuration
-bash# Save current settings
 ```bash
+# Save current settings
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 \
   --preset sermon_ultra \
   --save-config my_config.json
@@ -252,7 +253,7 @@ python audio_processor_pro-v5.8.py song.wav song_mastered.flac \
 ```
 Troubleshooting
 FFmpeg Not Found
-bash# Windows: Download from https://ffmpeg.org/ and add to PATH
+# Windows: Download from https://ffmpeg.org/ and add to PATH
 # Linux: sudo apt-get install ffmpeg
 # macOS: brew install ffmpeg
 Low Volume Output
