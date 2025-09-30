@@ -35,33 +35,40 @@ Batch processing support
 # Command Line Interface
 Basic Usage
 bash# Process with default sermon preset
+```bash
 python audio_processor_pro-v5.8.py input.mp3 output.mp3
-
+```
 # Use specific preset
+```bash
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 --preset podcast_pro
-
+```
 # Add gain boost
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 --preset sermon_ultra --gain 6.0
 Silence Processing Control
 bash# Default: Trailing silence only (safe)
+```bash
 python audio_processor_pro-v5.8.py input.mp3 output.mp3
-
+```
 # Disable leading silence trimming (recommended for recordings)
+```bash
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 --no-trim-leading
-
+```
 # Disable trailing silence trimming
+```bash
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 --no-trim-trailing
-
+```
 # Disable all silence processing
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 --no-silence-processing
 Batch Processing
 bash# Process all MP3 files in current directory
+```bash
 python audio_processor_pro-v5.8.py "*.mp3" --batch --preset broadcast_pro --overwrite
-
+```
 # Process specific folder
 python audio_processor_pro-v5.8.py "/path/to/audio/files/*.mp3" --batch
 Advanced Options
 bash# Custom output format and quality
+```bash
 python audio_processor_pro-v5.8.py input.wav output.mp3 \
   --format mp3 \
   --bitrate 320k \
@@ -77,11 +84,13 @@ python audio_processor_pro-v5.8.py input.mp3 output.mp3 \
   --no-compression \
   --no-noise-reduction \
   --disable-eq
+```
 
 # Channel analysis only
 python audio_processor_pro-v5.8.py input.mp3 --channel-analysis
 Using Custom Configuration
 bash# Save current settings
+```bash
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 \
   --preset sermon_ultra \
   --save-config my_config.json
@@ -89,6 +98,7 @@ python audio_processor_pro-v5.8.py input.mp3 output.mp3 \
 # Load saved settings
 python audio_processor_pro-v5.8.py input.mp3 output.mp3 \
   --load-config my_config.json
+```
 Available Presets
 sermon_ultra
 Premium sermon processing with enhanced silence truncation
@@ -154,27 +164,35 @@ Configurable strength
 
 Common Workflows
 Sermon Processing
-bashpython audio_processor_pro-v5.8.py sermon.mp3 sermon_processed.mp3 \
+```bash
+python audio_processor_pro-v5.8.py sermon.mp3 sermon_processed.mp3 \
   --preset sermon_ultra \
   --gain 8.0 \
   --no-trim-leading
+```
 Podcast Episode
-bashpython audio_processor_pro-v5.8.py podcast.wav podcast.mp3 \
+```bash
+python audio_processor_pro-v5.8.py podcast.wav podcast.mp3 \
   --preset podcast_pro \
   --format mp3 \
   --bitrate 192k \
   --no-trim-leading
+```
 Batch Process Recordings
-bashpython audio_processor_pro-v5.8.py "recordings/*.wav" \
+```bash
+python audio_processor_pro-v5.8.py "recordings/*.wav" \
   --batch \
   --preset broadcast_pro \
   --format mp3 \
   --overwrite
+```
 Music File
-bashpython audio_processor_pro-v5.8.py song.wav song_mastered.flac \
+```bash
+python audio_processor_pro-v5.8.py song.wav song_mastered.flac \
   --preset music_mastering \
   --format flac \
   --no-silence-processing
+```
 Troubleshooting
 FFmpeg Not Found
 bash# Windows: Download from https://ffmpeg.org/ and add to PATH
