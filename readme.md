@@ -12,6 +12,63 @@ Professional audio processing tool with enhanced GUI interface for sermon, podca
 - **Noise Reduction**: AI-powered noise removal
 - **Dynamic Compression**: Professional compression with parallel processing
 
+## Processing Pipeline
+
+The audio processing follows this exact order:
+
+1. **Channel Processing & Conversion**
+   - Stereo channel analysis
+   - Mono to stereo conversion
+   - Channel merging (if needed)
+
+2. **Peak Detection & Analysis**
+   - Analyze peak levels
+   - Calculate RMS and dynamic range
+   - Identify high peaks
+
+3. **Pre-Normalization Hard Limiting**
+   - Apply hard limiter if peaks detected
+   - Prevent clipping before normalization
+
+4. **Normalization**
+   - Normalize to optimal level
+   - Consistent volume baseline
+
+5. **Intelligent Volume Boost** (Optional)
+   - LUFS-based loudness targeting
+   - Adaptive gain calculation
+   - Dynamic range preservation
+
+6. **Dynamic Range Compression** (Optional)
+   - Multi-threaded processing
+   - Parallel compression support
+
+7. **Noise Reduction** (Optional)
+   - AI-powered spectral processing
+   - Speech preservation mode
+
+8. **Silence Processing** (Optional)
+   - Leading silence (disabled by default)
+   - Trailing silence (enabled by default)
+   - Internal silence compression
+   - Sentence break detection
+
+9. **Parametric EQ** (Optional)
+   - Multi-band equalization
+   - High/low pass filters
+
+10. **Final Safety Limiter** (Optional)
+    - Brick-wall limiting
+    - Prevents any clipping
+
+11. **Pre-Export Volume Boost** (Optional)
+    - Final volume adjustment
+    - Safety peak check
+
+12. **Export**
+    - Format conversion
+    - Bitrate/sample rate adjustment
+
 ## Installation
 
 ### Requirements
