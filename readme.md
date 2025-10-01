@@ -76,16 +76,93 @@ The audio processing follows this exact order:
 - FFmpeg installed and in PATH
 
 ### Install Dependencies
+
 ```bash
 pip install pydub numpy scipy noisereduce psutil
 ```
-# Usage
-Quick Start - GUI (Easiest)
+
+Windows
+
+Install Python dependencies
+```bash
+pip install pydub numpy scipy noisereduce psutil
+```
+
+# Download FFmpeg from https://ffmpeg.org/
+# Extract and add to system PATH
+macOS
+Install dependencies
+```bash
+pip3 install pydub numpy scipy noisereduce psutil
+```
+
+# Install FFmpeg using Homebrew
+```bash
+brew install ffmpeg
+```
+# Python should include tkinter by default
+# Test with: python3 -m tkinter
+### Linux (Ubuntu/Debian)
+### Install tkinter (required for GUI)
+```bash
+sudo apt-get update
+sudo apt-get install python3-tk
+```
+
+# Install FFmpeg
+```bash
+sudo apt-get install ffmpeg
+```
+# Install Python dependencies
+```bash
+pip3 install pydub numpy scipy noisereduce psutil
+```
+### Linux (Fedora/CentOS)
+```bash
+sudo dnf install python3-tkinter ffmpeg
+pip3 install pydub numpy scipy noisereduce psutil
+```
+### Verify Installation
+
+### Check Python version
+```bash
+python --version  # or python3 --version
+```
+# Check FFmpeg
+```bash
+ffmpeg -version
+```
+# Test tkinter (for GUI)
+```bash
+python -m tkinter  # or python3 -m tkinter
+```
+### Quick Start
+### GUI Interface (Recommended)
+# Windows
 ```bash
 python audio_processor_gui.py
 ```
-The GUI provides an intuitive interface with:
-## Screenshots
+# macOS/Linux
+```bash
+python3 audio_processor_gui.py
+```
+### Command Line Interface
+# Basic usage
+```bash
+python audio_processor_pro-v5.8.py input.mp3 output.mp3
+```
+
+# With preset
+```bash
+python audio_processor_pro-v5.8.py input.mp3 output.mp3 --preset sermon_ultra
+```
+# Batch processing
+```bash
+python audio_processor_pro-v5.8.py "*.mp3" --batch --preset podcast_pro
+```
+
+### The GUI provides an intuitive interface with:
+### Screenshots
 
 ### GUI Main Interface
 ![Main Interface](screenshots/gui-main.png)
