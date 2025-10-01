@@ -85,6 +85,19 @@ Quick Start - GUI (Easiest)
 python audio_processor_gui.py
 ```
 The GUI provides an intuitive interface with:
+## Screenshots
+
+### GUI Main Interface
+![Main Interface](screenshots/gui-main.png)
+
+### Module Configuration
+![Module Config](screenshots/gui-modules.png)
+
+### Processing View
+![Processing](screenshots/gui-processing.png)
+
+### Processing Logs
+![Processing](screenshots/gui-logs.png)
 
 # Visual module configuration
 Preset management
